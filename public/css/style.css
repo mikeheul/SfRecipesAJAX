@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    padding: 30px 70px;
+    min-height: 100vh;
+}
+
+/* Add styles for the spinning logo */
+.spinner-logo {
+    width: 30px; /* Set the width of your logo */
+    height: 30px; /* Set the height of your logo */
+    opacity: .5;
+    animation: spin 1s linear infinite; /* Rotate the logo infinitely */
+    display: none;
+    margin: 20px 0;
+}
+
+.thumb {
+    width: 300px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Optional: Add some spacing */
+#load-recipes {
+    margin-top: 10px;
+    outline: none;  
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+#recipe-container img {
+    border-radius: 10px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.recipe-desc {
+    text-align: justify;
+}

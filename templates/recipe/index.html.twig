@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recipe AJAX API{% endblock %}
+
+{% block body %}
+
+<h1>Recipes API Ajax</h1>
+
+<button id="load-recipes">Load Random Recipe</button>
+<div id="recipe-container">
+    <!-- Recipes will be displayed here -->
+</div>
+
+<script src="{{ asset('js/load-recipes.js') }}"></script>
+{% endblock %}
