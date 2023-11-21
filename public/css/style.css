@@ -8,6 +8,9 @@ main {
     padding: 30px 70px;
     min-height: 100vh;
 }
+h3 {
+    margin: 20px 0;
+}
 
 /* Add styles for the spinning logo */
 .spinner-logo {
@@ -46,8 +49,13 @@ main {
 #recipe-container img {
     border-radius: 10px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    margin: 20px 0;
 }
 
+.recipe-infos {
+    display: flex;
+    justify-content: space-between;
+}
 .recipe-desc {
     text-align: justify;
 }

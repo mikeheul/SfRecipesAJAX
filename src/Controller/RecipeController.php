@@ -35,7 +35,7 @@ class RecipeController extends AbstractController
         $recipeData = [
             'id' => $recipe['idMeal'],
             'name' => $recipe['strMeal'],
-            'description' => $recipe['strInstructions'],
+            'instructions' => $recipe['strInstructions'],
             'area' => $recipe['strArea'],
             'thumb' => $recipe['strMealThumb'],
             'ingredients' => $this->extractIngredients($recipe),

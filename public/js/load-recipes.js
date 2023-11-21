@@ -46,17 +46,24 @@ document.addEventListener('DOMContentLoaded', function () {
         // clear previous content
         container.innerHTML = ''; 
         var recipeDiv = document.createElement('div');
+        var recipeInfos = document.createElement('div');
+        var recipeDesc = document.createElement('div');
+
+        recipeInfos.classList.add('recipe-infos')
         // recipe name
-        recipeDiv.innerHTML += '<h3>' + recipe.name + '</h3><ul>' +
-        // loop ingredients
+        recipeInfos.innerHTML += '<div><h3>' + recipe.name + '</h3><ul>' +
+        // loop ingredients + area
         recipe.ingredients.map(function (ingredient) {
             return '<li>' + ingredient + '</li>';
         }).join('') +
-        '</ul>';
-        // country + image
-        recipeDiv.innerHTML += '<p>Area : ' + recipe.area + '</p><img class="thumb" src="' + recipe.thumb + '" />'
-        // description
-        recipeDiv.innerHTML += '<p class="recipe-desc">' + recipe.description + '</p>'
+        '</ul><p><b>Area : </b>' + recipe.area + '</p></div>';
+        // image
+        recipeInfos.innerHTML += '<div><img class="thumb" src="' + recipe.thumb + '" /></div>'
+        // instructions
+        recipeDesc.innerHTML += '<p class="recipe-desc"><b>Intructions :</b> ' + recipe.instructions + '</p>'
+
+        recipeDiv.appendChild(recipeInfos);
+        recipeDiv.appendChild(recipeDesc);
         container.appendChild(recipeDiv);
     }
 
