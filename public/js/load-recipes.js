@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         spinner.style.display = 'block';
         // disable button loading recipes
         loadButton.setAttribute('disabled', 'true');
+        loadButton.style.cursor = 'not-allowed';
 
         // spinner displays during 1/2 second
         setTimeout(function () {
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     // hide spinner after loading
                     spinner.style.display = 'none';
                     loadButton.removeAttribute('disabled');
+                    loadButton.style.cursor = 'pointer';
                 });
         }, 500);
     });
